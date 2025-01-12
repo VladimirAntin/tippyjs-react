@@ -16,4 +16,5 @@ export default (Tippy, defaultProps) =>
             })
           : null}
       </Tippy>
-  });
+    );
+  };
