@@ -20,6 +20,7 @@ module.exports = {
   plugins: ['react-hooks'],
   extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier'],
   rules: {
+    'react/react-in-jsx-scope': 'off',
     'no-console': 'off',
     'react/prop-types': 'off',
     'no-unused-vars': ['error', {ignoreRestSiblings: true}],
