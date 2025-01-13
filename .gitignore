@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+coverage
+.devserver
+dist
+umd
+esm
+.idea
