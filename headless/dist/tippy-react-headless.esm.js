@@ -1,5 +1,5 @@
-import tippy, { createSingleton } from 'tippy.js';
-export { default as tippy } from 'tippy.js';
+import tippy, { createSingleton } from 'tippy.js/headless';
+export { default as tippy } from 'tippy.js/headless';
 import React, { useLayoutEffect, useEffect, useRef, useState, cloneElement, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 
@@ -502,9 +502,33 @@ function useSingletonGenerator(createSingleton) {
   };
 }
 
-var useSingleton = /*#__PURE__*/useSingletonGenerator(createSingleton);
-var index = /*#__PURE__*/TippyGenerator(tippy);
+var forwardRef = (function (Tippy, defaultProps) {
+  return function TippyWrapper(_ref) {
+    var children = _ref.children,
+        _ref2 = _ref.ref,
+        props = _objectWithoutPropertiesLoose(_ref, ["children", "ref"]);
 
-export default index;
+    return (
+      /*#__PURE__*/
+      // If I spread them separately here, Babel adds the _extends ponyfill for
+      // some reason
+      React.createElement(Tippy, Object.assign({}, defaultProps, props), children ? /*#__PURE__*/cloneElement(children, {
+        ref: function ref(node) {
+          preserveRef(_ref2, node);
+          preserveRef(children.ref, node);
+        }
+      }) : null)
+    );
+  };
+});
+
+var useSingleton = /*#__PURE__*/useSingletonGenerator(createSingleton);
+var headless = /*#__PURE__*/forwardRef( /*#__PURE__*/TippyGenerator(tippy), {
+  render: function render() {
+    return '';
+  }
+});
+
+export default headless;
 export { useSingleton };
-//# sourceMappingURL=tippy-react.esm.js.map
+//# sourceMappingURL=tippy-react-headless.esm.js.map

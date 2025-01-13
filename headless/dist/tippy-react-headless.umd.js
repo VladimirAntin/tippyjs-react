@@ -1,6 +1,6 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tippy.js'), require('react'), require('react-dom')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'tippy.js', 'react', 'react-dom'], factory) :
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tippy.js/headless'), require('react'), require('react-dom')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'tippy.js/headless', 'react', 'react-dom'], factory) :
   (global = global || self, factory(global.Tippy = {}, global.tippy, global.React, global.ReactDOM));
 }(this, (function (exports, tippy, React, reactDom) { 'use strict';
 
@@ -506,14 +506,38 @@
     };
   }
 
+  var forwardRef = (function (Tippy, defaultProps) {
+    return function TippyWrapper(_ref) {
+      var children = _ref.children,
+          _ref2 = _ref.ref,
+          props = _objectWithoutPropertiesLoose(_ref, ["children", "ref"]);
+
+      return (
+        /*#__PURE__*/
+        // If I spread them separately here, Babel adds the _extends ponyfill for
+        // some reason
+        React__default.createElement(Tippy, Object.assign({}, defaultProps, props), children ? /*#__PURE__*/React.cloneElement(children, {
+          ref: function ref(node) {
+            preserveRef(_ref2, node);
+            preserveRef(children.ref, node);
+          }
+        }) : null)
+      );
+    };
+  });
+
   var useSingleton = /*#__PURE__*/useSingletonGenerator(tippy.createSingleton);
-  var index = /*#__PURE__*/TippyGenerator(tippy__default);
+  var headless = /*#__PURE__*/forwardRef( /*#__PURE__*/TippyGenerator(tippy__default), {
+    render: function render() {
+      return '';
+    }
+  });
 
   exports.tippy = tippy__default;
-  exports.default = index;
+  exports.default = headless;
   exports.useSingleton = useSingleton;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
-//# sourceMappingURL=tippy-react.umd.js.map
+//# sourceMappingURL=tippy-react-headless.umd.js.map

@@ -1,6 +1,6 @@
 {
   "name": "@tippyjs/react",
-  "version": "19.0.0-beta",
+  "version": "19.0.0",
   "description": "React component for Tippy.js",
   "main": "dist/tippy-react.umd.js",
   "module": "dist/tippy-react.esm.js",
@@ -55,8 +55,8 @@
     "tippy.js": "^6.3.1"
   },
   "peerDependencies": {
-    "react": ">=16.8",
-    "react-dom": ">=16.8"
+    "react": ">=19",
+    "react-dom": ">=19"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
@@ -64,7 +64,7 @@
     "@babel/preset-react": "^7.0.0",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
-    "@types/react": "^16.8.2",
+    "@types/react": "^19",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^25.1.0",
     "babel-plugin-annotate-pure-calls": "^0.4.0",
@@ -79,8 +79,8 @@
     "lint-staged": "^8.1.0",
     "parcel": "^1.12.3",
     "prettier": "^1.16.1",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
+    "react": "^19",
+    "react-dom": "^19",
     "react-spring": "^8.0.27",
     "rollup": "^1.14.3",
     "rollup-plugin-babel": "^4.3.2",
