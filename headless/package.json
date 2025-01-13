@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "description": "Headless rendering for Tippy.js React",
   "types": "../index.d.ts",
-  "main": "dist/tippy-react-headless.umd.js",
-  "module": "dist/tippy-react-headless.esm.js",
-  "unpkg": "dist/tippy-react-headless.umd.min.js",
+  "main": "../build/headless/dist/tippy-react-headless.umd.js",
+  "module": "../build/headless/dist/tippy-react-headless.esm.js",
+  "unpkg": "../build/headless/dist/tippy-react-headless.umd.min.js",
   "sideEffects": false,
   "files": [
     "dist/"

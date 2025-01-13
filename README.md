@@ -28,10 +28,10 @@ integration including headless rendering abilities.
 
 ```bash
 # npm
-npm i @tippyjs/react
+npm i @antin502/tippy-react
 
 # Yarn
-yarn add @tippyjs/react
+yarn add @antin502/tippy-react
 ```
 
 CDN: https://unpkg.com/@tippyjs/react
@@ -57,7 +57,7 @@ prop. It can take a string or a tree of React elements.
 
 ```jsx
 import React from 'react';
-import Tippy from '@tippyjs/react';
+import Tippy from '@antin502/tippy-react';
 import 'tippy.js/dist/tippy.css'; // optional
 
 const StringContent = () => (
@@ -81,7 +81,7 @@ Render your own tippy element from scratch:
 
 ```jsx
 import React from 'react';
-import Tippy from '@tippyjs/react/headless'; // different import path!
+import Tippy from '@antin502/tippy-react/headless'; // different import path!
 
 const HeadlessTippy = () => (
   <Tippy
@@ -298,7 +298,7 @@ functionality are not burdened with the bundle size cost of it. In addition,
 they enable a neat way to extend the functionality of tippy instances.
 
 ```jsx
-import Tippy from '@tippyjs/react';
+import Tippy from '@antin502/tippy-react';
 // ⚠️ import from 'tippy.js/headless' if using Headless Tippy
 import {followCursor} from 'tippy.js';
 
@@ -349,7 +349,7 @@ targets.
 [View on CodeSandbox](https://codesandbox.io/s/unruffled-pasteur-4yy99?file=/src/App.js)
 
 ```jsx
-import Tippy, {useSingleton} from '@tippyjs/react';
+import Tippy, {useSingleton} from '@antin502/tippy-react';
 
 function App() {
   const [source, target] = useSingleton();
@@ -385,7 +385,7 @@ const [source, target] = useSingleton({
 The `render` prop takes the singleton content as a second parameter:
 
 ```jsx
-import Tippy, {useSingleton} from '@tippyjs/react/headless';
+import Tippy, {useSingleton} from '@antin502/tippy-react/headless';
 
 function App() {
   const [source, target] = useSingleton();

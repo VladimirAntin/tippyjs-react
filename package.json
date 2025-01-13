@@ -1,10 +1,10 @@
 {
-  "name": "@tippyjs/react",
-  "version": "19.0.0",
+  "name": "@antin502/tippy-react",
+  "version": "19.0.0-beta",
   "description": "React component for Tippy.js",
-  "main": "dist/tippy-react.umd.js",
-  "module": "dist/tippy-react.esm.js",
-  "unpkg": "dist/tippy-react.umd.min.js",
+  "main": "build/dist/tippy-react.umd.js",
+  "module": "build/dist/tippy-react.esm.js",
+  "unpkg": "build/dist/tippy-react.umd.min.js",
   "types": "index.d.ts",
   "sideEffects": false,
   "scripts": {
@@ -23,6 +23,7 @@
     "react"
   ],
   "files": [
+    "build/",
     "dist/",
     "headless/",
     "index.d.ts"
@@ -95,10 +96,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atomiks/tippyjs-react.git"
+    "url": "git+https://github.com/VladimirAntin/tippyjs-react.git"
   },
   "bugs": {
-    "url": "https://github.com/atomiks/tippyjs-react/issues"
+    "url": "https://github.com/VladimirAntin/tippyjs-react/issues"
   },
-  "homepage": "https://github.com/atomiks/tippyjs-react#readme"
+  "homepage": "https://github.com/VladimirAntin/tippyjs-react#readme"
 }

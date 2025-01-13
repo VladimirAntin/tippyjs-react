@@ -34,7 +34,7 @@ export default [
     output: {
       ...COMMON_OUTPUT,
       format: 'umd',
-      file: './dist/tippy-react.umd.js',
+      file: './build/dist/tippy-react.umd.js',
     },
   },
   {
@@ -48,7 +48,7 @@ export default [
     output: {
       ...COMMON_OUTPUT,
       format: 'umd',
-      file: './dist/tippy-react.umd.min.js',
+      file: './build/dist/tippy-react.umd.min.js',
     },
   },
   {
@@ -57,7 +57,7 @@ export default [
     output: {
       ...COMMON_OUTPUT,
       format: 'esm',
-      file: './dist/tippy-react.esm.js',
+      file: './build/dist/tippy-react.esm.js',
     },
   },
   {
@@ -67,7 +67,7 @@ export default [
     output: {
       ...COMMON_OUTPUT,
       format: 'umd',
-      file: './headless/dist/tippy-react-headless.umd.js',
+      file: './build/headless/dist/tippy-react-headless.umd.js',
     },
   },
   {
@@ -82,7 +82,7 @@ export default [
     output: {
       ...COMMON_OUTPUT,
       format: 'umd',
-      file: './headless/dist/tippy-react-headless.umd.min.js',
+      file: './build/headless/dist/tippy-react-headless.umd.min.js',
     },
   },
   {
@@ -92,7 +92,7 @@ export default [
     output: {
       ...COMMON_OUTPUT,
       format: 'esm',
-      file: './headless/dist/tippy-react-headless.esm.js',
+      file: './build/headless/dist/tippy-react-headless.esm.js',
     },
   },
 ];

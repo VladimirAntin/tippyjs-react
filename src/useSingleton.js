@@ -23,7 +23,7 @@ export default function useSingletonGenerator(createSingleton) {
         if (process.env.NODE_ENV !== 'production') {
           console.error(
             [
-              '@tippyjs/react: The `source` variable from `useSingleton()` has',
+              '@antin502/tippy-react: The `source` variable from `useSingleton()` has',
               'not been passed to a <Tippy /> component.',
             ].join(' '),
           );
